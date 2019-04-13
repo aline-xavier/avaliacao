@@ -1,10 +1,9 @@
-
 <ion-header>
 
   <ion-navbar>
-      <button ion-button menuToggle>
-          <ion-icon name="menu"></ion-icon>
-      </button>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>Inicio</ion-title>
   </ion-navbar>
 
@@ -14,15 +13,14 @@
 <ion-content padding>
 
   <button ion-button full (click)="novoCliente()">Novo Cliente</button>
-
   <ion-card *ngFor="let cliente of listaDeClientes">
 
     <ion-card-header>
-     {{cliente?.nome}}
+      {{cliente?.nome}}
     </ion-card-header>
-  
+
     <ion-card-content>
-      <ion-icon name="mail"></ion-icon> {{cliente?.email}} 
+      <ion-icon name="mail"></ion-icon> {{cliente?.email}}
       <ion-icon name="call"></ion-icon> {{cliente?.telefone}}
 
       <button (click)="remove(cliente)">REMOVE</button>
@@ -30,8 +28,8 @@
       <button (click)="atualiza(cliente)">ATUALIZAR</button>
 
     </ion-card-content>
-    
-    
+
+
 
   </ion-card>
 
